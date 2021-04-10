@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-fluid {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-size: 25px 25px;
+  background-image:
+    linear-gradient(to right, rgb(204, 204, 204) 0px, transparent 1px),
+    linear-gradient(to bottom, rgb(204, 204, 204) 0px, transparent 1px);
+  
+}
+#zero-wrapper {
+    width: 404px;
+    background-color: black;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: solid 1px black;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    position: relative;
+    padding: 1px;
+}
+#wrapper {
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid 1px grey;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  height: 100%;
+}
+
+.wrapper-glare {
+  position: absolute;
+  box-sizing: border-box;
+  left: 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  height: 1px;
+  width: 392px;
+  padding: 3px 0;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.top {
+  top: 0;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0)));
+}
+
+.bottom {
+  bottom: 0px;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 95%, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.5)));
+}
+#root-div {
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    'clear clear equals equals'
+    'seven eight nine add'
+    'four five six subtract'
+    'one two three multiply'
+    'zero zero decimal divide';
+  gap: 10px;
+}
+
+button {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  height: 70px;
+}
+
+#display {
+  border: solid 1px grey;
+  margin-bottom: 15px;
+  font-family: 'Orbitron', sans-serif;
   color: white;
+  text-align: right;
+  padding: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+#equals, #add, #subtract, #multiply, #divide{
+  background-color: orange;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#clear {
+  background-color: grey;
 }
