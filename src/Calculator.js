@@ -92,19 +92,19 @@ class Calculator extends React.Component {
     return (
       <div id="calculator">
         <div id="display">{this.state.formula}</div>
-        <div class="grid-container">
+        <div className="grid-container">
           {digits.map((x, i) => {
             return (
-              <button onClick={this.handleDigits.bind(this)} value={x.operation} id={x.id} style={{ gridArea: x.id }}>{x.operation}</button>
+              <button onClick={this.handleDigits.bind(this)} value={x.operation} id={x.id} style={{ gridArea: x.id }} key={i}>{x.operation}</button>
             )
           })}
           {operators.map((x, i) => {
             return (
-              <button onClick={this.handleOperators.bind(this)} value={x.operation} id={x.id} style={{ gridArea: x.id }}>{x.operation}</button>
+              <button onClick={this.handleOperators.bind(this)} value={x.operation} id={x.id} style={{ gridArea: x.id }} key={i}>{x.operation}</button>
             )
           })}
-          <button onClick={this.handleClear.bind(this)} id={clear.id} style={{ gridArea: clear.id }}>{clear.operation}</button>
-          <button onClick={this.handleEquals.bind(this)} id={equals.id} style={{ gridArea: equals.id }}>{equals.operation}</button>
+          <button onClick={this.handleClear.bind(this)} id={clear.id} style={{ gridArea: clear.id }} key={clear.id}>{clear.operation}</button>
+          <button onClick={this.handleEquals.bind(this)} id={equals.id} style={{ gridArea: equals.id }} key={equals.id}>{equals.operation}</button>
         </div>
       </div>
     );

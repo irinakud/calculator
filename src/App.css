@@ -71,6 +71,7 @@ button {
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   height: 70px;
+  background-color: rgb(239, 239, 239);
 }
 
 #display {
@@ -88,4 +89,33 @@ button {
 
 #clear {
   background-color: grey;
+}
+
+@media (max-width: 404px), (max-height: 489px){
+  #zero-wrapper {
+    width: min(100vw, 82.6vh);
+    height: min(121vw, 100vh);
+  }
+  .wrapper-glare {
+    width: min(97vw, 80vh);
+    padding: min(0.75vw, 0.62vh) 0;
+  }
+  button{
+    width: min(20vw, 16.52vh);
+    height: min(17.5vw, 14.45vh);
+  }
+  #equals, #clear, #zero{
+    width: min(42.5vw, 35.1vh);
+  }
+  .grid-container {
+    gap: min(2.5vw, 2.06vh);
+  }
+  #root-div {
+    padding: min(5vw, 4.13vh);
+  }
+  #display {
+    margin-bottom: min(3.7vw, 3.05vh);
+    padding: min(2vw, 1.65vh);
+    font-size: min(4vw, 3.30vh);
+  }  
 }
